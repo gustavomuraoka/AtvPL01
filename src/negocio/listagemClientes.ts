@@ -13,6 +13,8 @@ export default class ListagemClientes extends Listagem {
             console.log(`Nome: ` + cliente.nome);
             console.log(`Nome social: ` + cliente.nomeSocial);
             console.log(`CPF: ` + cliente.getCpf.getValor);
+            const pets = cliente.getPets.map(pet => pet.getNome).join(", ");
+            console.log(`Pets: ` + (pets || "Nenhum pet cadastrado"));
             console.log(`--------------------------------------`);
         });
         console.log(`\n`);
